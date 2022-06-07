@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 1
+        // let book = new Object();
+        //     book.title = "HTML5";
+        //     book.author = "황기태";
+        //     book.price = 20000;
+        //     document.write(book.title);
+        //2
+
+        // let book ={
+        //     title : "HTML5",
+        //     author : "황기태",
+        //     price : 20000,
+        // }
+        // document.write("book :");
+        // document.write(book.title + ",");
+        // document.write(book.author + ",");
+        // document.write(book.price + ",");
+
+        //3
+
+        function book(title, author, price) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+
+            this.print1=function(){document.write(this.title+",")}
+            this.print2=function(){document.write(this.author+",")}
+            this.print3=function(){document.write(this.price)}
+            
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>book 객체 만들기</h1>
+    <hr>
+<script>
+    let novel = new book("HTML5","황기태",20000);
+
+    novel.print1();
+    novel.print2();
+    novel.print3();
+</script>
+</body>
+
+</html>

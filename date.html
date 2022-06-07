@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let now = new Date();
+        let startDay = new Date(2017, 2, 1); //new Date(년도, 월, 일) 월의 범위가 0부텉 11까지
+     //0은 1열, 11은 12열을 뜻한다.
+     let date = now.getDate();
+     let hour = now.getHours();
+     let ex = now.set
+     /*방문 시간에 따라 배경색 바꿔보기
+     방문시간 초가 짝수이면 violet 홀수이면 blue
+     */
+    </script>
+</head>
+
+<body>
+<h1>페이지 방문시간에서 초가 짝수이면 violet, 
+    홀수이면 blue 배경화면
+</h1>
+<hr/>
+<script>
+    let current = new Date();
+    if(current.getSeconds() % 2 ==0){ //초가 짝수
+        document.body.style.backgroundColor = "violet";
+        //document(html 문서) 안에 body 태그 style 속성 중에 background-color를 바꾼다.
+    } else{
+        document.body.style.backgroundColor = "lightskyblue";
+    }
+    document.write("현재 시간: " + current.getHours + "시,");
+    document.write(current.getMinutes() + "분" + current.getSeconds() + "초<br>")
+</script>
+</body>
+
+</html>

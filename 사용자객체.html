@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        개발자가 선언하는 새로운 객체 타입 => prototype 객체
+        은행 계좌를 표현하는 account 객체
+        */
+        let account = new Object(); //빈 객체를 만든다 => 안에 아무것도 없음
+        account.owner = "한예진" //객체 안에 프로퍼티 owner를 추가한다 (초기화까지 동시에)
+        account.code = "111-1111"; //객체 안에 프로퍼티 code를 추가한다
+        account.balance = "50000"; //객체 안에 프로퍼티 balance를 추가한다
+
+        let name = account["owner"]; //name = "한예진"; => account 객체 안의 owner 라는 프로퍼티에 접근
+        account["balance"] = 100000; // account 객체 안의 balance 라는 프로퍼티의 값을 바꾼다
+        account.balance = 150000;
+
+        function deposit(money) {
+            this.balance += money; //this => 현재의 객체를 뜻함
+            //메소드 함수에서 this 키워드를 사용하지 않으면 전역변수나 지역변수에서 이름이 같은 변수에 접근할 수도 있으니 조심
+        }
+        account.deposit = deposit; //객체에 매소드(함수) 추가
+        account.deposit(100000);
+
+        let account2 = {
+            //프로퍼티 생성, 초기화
+            owner: "한예진",
+            code: "2222-1111",
+            balance: 20000,
+            //함수(메소드) 작성
+            getBalance: function () { //잔액조회
+                return this.balance;
+            },
+            deposit: function () { //입금
+                this.balance += money;
+            },
+            withdraw: function (money) { //출금
+                this.balance -= money;
+                return money;
+            },
+        };
+        //프로토타입 Student를 만든다.
+        function Student(name, score) {
+            this.unv = "서울대학교";
+            this.name = name;
+            this.score = score;
+            this.getGrade = function () {
+                if (this.score > 80)
+                    return "A";
+                else if (this.score > 60) {
+                    return "B";
+                } else {
+                    return "F";
+                };
+            }
+        }
+        let s = new Student("홍길동", 90);
+        let s2 = new Student("이순신", 70);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

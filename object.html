@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let account = { //계좌 객체
+            owner: "한예진",
+            accountNumber: "111-222",
+            balance: "50000",
+            deposit: function () {
+                //입금
+            },
+            withdraw: function () {
+                //출금
+            }
+        };
+
+        let today = new Date(); //시간 정보를 다루는 Date 객체
+        document.write("현재 시간 : " + today.toLocaleString() + "<br>");
+        let msg = "문자열";
+        let msg2 = new String("자바스크립트 공부하기");
+    document.write("msg의 내용" + msg + "<br>");
+    document.write("msg의 길이" + msg.length + "<br>");
+    document.write("msg의 내용" + msg2 + "<br>");
+    document.write("msg의 길이" + msg2.length + "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
